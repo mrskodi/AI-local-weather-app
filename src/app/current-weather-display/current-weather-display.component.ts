@@ -13,7 +13,7 @@ export class CurrentWeatherDisplayComponent implements OnInit {
     this.current = {
       city: "Seattle",
       country: "US",
-      date: 147890654,
+      date: 1485789600,
       temperature: 40,
       description: 'Sunny',
       image:''
