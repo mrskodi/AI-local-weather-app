@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CurrentWeatherDisplayComponent } from './current-weather-display/current-weather-display.component';
-
+import { GetAPIdataService } from './get-apidata.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { CurrentWeatherDisplayComponent } from './current-weather-display/curren
     CurrentWeatherDisplayComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GetAPIdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

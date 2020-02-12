@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import { Interface } from 'readline';
 import { IcurrentWeatherDisplay } from '../icurrent-weather-display';
+import { GetAPIdataService } from '../get-apidata.service';
 
 @Component({
   selector: 'app-current-weather-display',
@@ -9,18 +10,10 @@ import { IcurrentWeatherDisplay } from '../icurrent-weather-display';
 })
 export class CurrentWeatherDisplayComponent implements OnInit {
   current: IcurrentWeatherDisplay;
-  constructor() { 
-    this.current = {
-      city: "Seattle",
-      country: "US",
-      date: 1485789600,
-      temperature: 40,
-      description: 'Sunny',
-      image:''
-    } as IcurrentWeatherDisplay
-  }
+  constructor(private getApidataService: GetAPIdataService) {}
 
   ngOnInit(): void {
+    this.getApidataService.getCurrentWeather('Seattle', 'US').subscribe(data => this.current = data);
   }
 
 }
