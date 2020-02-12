@@ -12,8 +12,8 @@ export class CurrentWeatherDisplayComponent implements OnInit {
   current: IcurrentWeatherDisplay;
   constructor(private getApidataService: GetAPIdataService) {}
 
-  ngOnInit(): void {
-    this.getApidataService.getCurrentWeather('Seattle', 'US').subscribe(data => this.current = data);
+  ngOnInit() {
+    this.getApidataService.getCurrentWeather('Mill Creek', 'US').subscribe(data => this.current = data);
   }
 
 }

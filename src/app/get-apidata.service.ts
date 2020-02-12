@@ -22,9 +22,10 @@ export class GetAPIdataService {
       city: data.name,
       country: data.sys.country,
       date: data.dt * 1000,
+      image: `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`,
       temperature: this.convertKelvinToFarenheit(data.main.temp),
-      description: data.weather[0].description,
-      image: `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+      description: data.weather[0].description
+      
     }
   }
 
