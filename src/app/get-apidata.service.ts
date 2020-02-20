@@ -5,11 +5,12 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IcurrentWeatherDisplay } from './icurrent-weather-display';
+import { IWeatherService } from './iweather-service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GetAPIdataService {
+export class GetAPIdataService implements IWeatherService{
 
   constructor(private httpClient: HttpClient) { }
 
