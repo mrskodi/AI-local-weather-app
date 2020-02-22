@@ -17,7 +17,7 @@ export class GetFakeApidataService implements IWeatherService{
   }
   constructor() { }
 
-  public getCurrentWeather(city: string, country: string): Observable<IcurrentWeatherDisplay>{
+  public getCurrentWeather(searchText: string | number, country?: string): Observable<IcurrentWeatherDisplay>{
     return of(this.fakeWeather);
   }
 }

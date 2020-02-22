@@ -11,7 +11,7 @@ import { IWeatherService } from '../iweather-service';
 
 export class CurrentWeatherDisplayComponent implements OnInit {
   current: IcurrentWeatherDisplay;
-  constructor(private getApidataService: IWeatherService) {}
+  constructor(private getApidataService: GetAPIdataService) {}
 
   ngOnInit() {
     this.getApidataService.getCurrentWeather('Mill Creek', 'US').subscribe(data => this.current = data);

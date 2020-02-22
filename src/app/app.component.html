@@ -1,11 +1,14 @@
 <div style="text-align: center;">
-  <title>Local Weather!</title>
+  <mat-toolbar>Local Weather!</mat-toolbar>
   <div>
     <h2>
       Your city's weather, right here!
     </h2>
   </div>
-  <span>
+  <div>
+    <app-city-search></app-city-search>
+  </div>
+  <mat-card>
     <b><app-current-weather-display></app-current-weather-display></b>
-  </span>
+  </mat-card>
 <div>
